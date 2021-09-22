@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Senai</title>
+</head>
+<body>
+    <script>
+        window.alert("Bem vindo aos eventos do mês de Setembro!");
+        let dataDoEvento = window.prompt("Por favor, informe o dia do evento: ");
+        const diaDeHoje = new Date(); //Pega a data de hoje no formato MM/DD/AA
+        let diaAtual = diaDeHoje.getDate(); //Pega apenas o dia da data informada
+        if(dataDoEvento < diaAtual) {
+            let idadeParticipante = window.prompt("Por favor, digite sua idade: ");
+            if(idadeParticipante>18){
+                let Palestras = ['Gerson', 'Marcos', 'Felipe'] //Array
+                window.confirm("Iremos agora para o menu de Palestras, por favor digite o nome do palestrante que deseja acompanhar")                                
+                let PalestrasNaTela = window.prompt(Palestras)               
+                if(PalestrasNaTela == 'Gerson'){
+                    window.alert("Cadastro realizado com sucesso, aguarde até a data da palestra");                                        
+                }else if(PalestrasNaTela == 'Marcos'){
+                    window.alert("Palestra cheia")
+                }else if(PalestrasNaTela == 'Felipe'){
+                    window.alert("Cadastro realizado com sucesso, aguarde até a data da palestra")
+                }
+                else {
+                    window.alert("Nenhuma palestra localizada")
+                } 
+
+            }else{
+                window.alert("Cadastro não permitido pela idade")
+            }         
+            
+        }else{
+            window.alert("Evento não autorizado por data inválida")
+        }
+        
+    </script>    
+</body>
+</html>
